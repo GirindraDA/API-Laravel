@@ -30,4 +30,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 //OPSI AGAR BISA DENGAN 1 ROUTE SAJA
-Route::apiResource('buku', BukuController::class);
+Route::apiResource('buku', BukuController::class)->middleware('checkHost');
